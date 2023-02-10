@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom left, #ff380c, #fff439);
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 4rem;
+  text-align: center;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 1rem;
+}
+
+.sub {
+  background-image: linear-gradient();
+  padding-bottom: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  border: 0.1rem solid rgba(0, 0, 0, 0.7);
+}
+
+.sub p {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-size: x-large;
+}
+
+a img {
+  width: 500px;
+}
