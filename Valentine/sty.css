@@ -1,0 +1,109 @@
+
+.header{
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index:1000;
+    background: var(--red);
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:2rem 9%;
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: #ffffff;
+}
+
+.header .logo i{
+    color: #222222;
+    padding-right: .5rem;
+}
+
+.header .navbar a{
+    font-size: 1.7rem;
+    color: #ffffff;
+    margin: 0 1rem;
+}
+
+.header .navbar a:hover{
+    color: #222222;
+}
+
+.header .icons div{
+    font-size: 2.5rem;
+    margin-left: 1.7rem;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.header .icons div:hover{
+    color: #222222;
+}
+
+#menu-btn{
+    display:none;
+}
+
+@keyframes fadeLeft{
+    0%{
+        opacity: 0;
+        transform: translateY(-5rem);
+    }
+}
+
+@keyframes fadeUp{
+    0%{
+        opacity: 0;
+        transform:scale(0.5);
+    }
+}
+
+.home{
+    padding-top: 5rem;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+} 
+ .home .slides-container .slide{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    display:none;
+}
+.home .slides-container .slide.active{
+    display:flex;
+}
+
+.home .slides-container .slide .content{
+    flex: 1 1 40rem;
+    animation: fadeLeft .4s linear .4s backwards;
+}
+
+.home .slides-container .slide .content span{
+    color: #000;
+    font-size:2.5rem;
+}
+
+.home .slides-container .slide .content h3{
+    font-size:6rem;
+    color: #222;
+    padding:.5rem 0;
+}
+
+.home .slides-container .slide .img{
+    flex: 1 1 40rem;
+    margin: 3rem 0;
+}
+
+.home .slides-container .slide .img img{
+    width: 100%;
+    animation: fadeUp .4s linear;
+}
