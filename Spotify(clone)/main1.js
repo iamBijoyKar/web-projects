@@ -70,7 +70,7 @@ Array.from(document.getElementsByClassName('songitemPlay')).forEach((Element)=>{
         e.target.classList.remove('fa-circle-play');
         e.target.classList.add('fa-circle-pause');
        
-       audioElement.src=`songs/${songIndex+1}.mp3`
+       audioElement.src=`Songs/${songIndex+1}.mp3`
        masterSongName.innerText=songs[songIndex].songName;
        audioElement.currentTime=0;
        audioElement.play();
