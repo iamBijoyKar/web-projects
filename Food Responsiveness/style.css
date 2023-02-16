@@ -1,0 +1,560 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*,
+*:after,
+*:before{
+    -webkit-box-sizing: border-box;
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+}
+:active,:hover,:focus{
+    outline: 0 !important;
+    outline-offset: 0;
+}
+a,a:hover{
+    text-decoration: none;
+   
+}
+a:hover{
+    color:var(--primary-color);
+}
+ul,ol{
+    margin: 0;
+    padding: 0;
+}
+/* ===Variable Dfines*/
+:root{
+    --primary-color:#A82C48;
+    --secondary-color:#43121d;
+    --third-color:#f98169;
+    --white-color:#fff;
+    --text-color:#555;
+    --text-gray:#999;
+    --black-color:#000;
+    --primary-font: 'Roboto', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--primary-font);
+    font-size: 100%;
+    font-weight: 400;
+}
+
+/*
+===========================
+    customize scrollbar
+===========================
+*/
+::-webkit-scrollbar{
+    width: 0.65rem;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--white-color);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--primary-color);
+}
+/*
+===========================
+    customize css
+===========================
+*/
+h1{
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+h2{
+    font-weight: 700;
+    font-size: 2.25rem;
+    text-transform: capitalize;
+    font-family:'Courier New', Courier, monospace;
+    color: var(--secondary-color);
+    line-height: 3rem;
+}
+h4{
+    color: var(--secondary-color);
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+h5{
+    color: var(--primary-color);
+    text-transform: capitalize;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+p{
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 400;
+    line-height: 1.75rem;
+    letter-spacing: 1px;
+}
+.main-btn{
+    display: inline-block;
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5rem;
+    background-color: var(--primary-color);
+    border: 0.187rem solid var(--primary-color);
+    color: var(--white-color);
+    font-size: 0.9375rem;
+    text-transform: capitalize;
+    box-shadow:  0 0.5rem 1rem rgba(0,0, 0, 0.7);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+.white-btn{
+    padding: 0.625rem 1.875rem;
+    line-height: 1.5rem;
+    background-color: var(--white-color);
+    border: 0.187rem solid var(--white-color);
+    color: var(--text-color);
+    font-size: 0.9375rem;
+    text-transform: capitalize;
+    box-shadow:  0 0.5rem 1rem rgba(0,0, 0, 0.7);
+    -webkit-transition: all .4s ease-out 0s;
+    -o-transition: all .4s ease-out 0s;
+    -moz-transition: all .4s ease-out 0s;
+    transition: all 0.4s ease-out 0s;
+}
+.main-btn:hover{
+    background-color: rgba(0,0, 0, 0.5);
+    color: #fff;
+}
+.white-btn:hover{
+    background-color: rgba(0,0, 0, 0.5);
+    color: #fff;
+    border-color:var(--primary-color) ;
+
+}
+.wrapper{
+    padding-top: 8.25rem;
+    padding-bottom: 8.25rem;
+}
+.text-content{
+    width:70%;
+    margin:auto;
+}
+.counter-section h2,
+.testimonial-section h2,
+.book-food-text-h2{
+    color:var(--white-color);
+}
+/*
+===========================
+    header design
+===========================
+*/
+
+.navigation-wrap{
+    position: fixed;
+    width:100%;
+    left:0;
+    z-index:10000;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    /**background:rgba(255, 147, 31, 0.496);*/
+}
+.navigation-wrap .nav-item{
+    padding: 0 0.625rem;
+    transition: all 200ms linear;
+    background: #fd610d;
+    margin:0 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0,0, 0, 0.5);
+    border: 0.1rem solid rgba(0,0, 0, 0.5);
+    border-radius: 13%;
+}
+.navbar-toggler:focus{
+    outline: unset ;
+    border: unset;
+    box-shadow: unset;
+}
+.nav-item{
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+}
+.navigation-wrap a{
+    color: var(--white-color)!important;
+}
+.navigation-wrap a:hover{
+    color:var(--secondary-color)!important;
+    position:relative;
+    top: 10px;
+    font-size: 1rem;
+}
+.navigation-wrap .main-btn{
+    padding: 0.3rem 1.5rem ;
+    margin-left: 0.6rem;
+
+}
+.navigation-wrap .main-btn:hover{
+    background: #fd610d;
+    border-radius: 13%;
+    
+}
+/* change nav styling on scroll*/
+ .scroll-on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    box-shadow:   0 0.5rem 1rem rgba(0,0, 0, 0.3);
+    transition: all 0.1s ease-in-out 0s;
+}
+/*
+===========================
+    top banner design
+===========================
+*/
+.top-banner{
+    width:100%;
+    background: url(Img/bg-3.jpg) no-repeat center;
+    background-size: cover;
+    padding: 16.8rem 0 10rem;
+
+}
+.top-banner p{
+    font-size: 1.5rem;
+    color: #000;
+}
+/*
+===========================
+    counter design
+===========================
+*/
+.counter-section{
+    background-color:var(--primary-color);
+    padding: 2.5rem 0;
+}
+.counter-section p{
+    color: var(--white-color);
+    text-transform: uppercase;
+}
+
+/*
+===========================
+    about section design
+===========================
+*/
+.about-section{
+    background: var(--white-color);
+}
+.about-section .card,
+.about-section .card img{
+    border-radius: 0.25rem;
+}
+.about-section .text-sec{
+    padding-left: 2rem;
+}
+/*
+===========================
+    food type section design
+===========================
+*/
+.food-type{
+    padding-top: 3.25rem;
+  
+
+}
+.food-type ul li{
+    font-size: 2rem;
+    color: var(--text-color);
+    line-height: 60px;
+    margin-left: 30px;
+    position: relative;
+}
+
+.food-type ul li i{
+    position: absolute;
+    left: -2rem;
+    top:1rem;
+    color: var(--primary-color);
+    font-size: 1.25rem;
+    font-weight: 900;
+    
+} 
+/*
+===========================
+    story section design
+===========================
+*/
+.story-section{
+    width:100%;
+    height: 28rem;
+    background: url(Img/nadia-valko-0hAdietsUrE-unsplash.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 100px;
+    text-align: center;
+}
+.story-section h2{
+    color: #A82C48;
+}
+.story-section h2:hover{
+  background-color: rgba(0,0, 0, 0.7);
+  border-radius: 34px;
+   
+}
+
+.story-section p{
+    color:darkblue;
+    font-size: 1rem;
+}
+
+.story-section p:hover{
+    color: #4e26dce8;
+    font-size: 1.5rem;
+    background-color: rgba(0,0, 0, 0.7);
+    border-radius: 13px;
+}
+/*
+===========================
+    story section design
+===========================
+*/
+.explore-food .card{
+    border:none;
+    box-shadow:   0 0.5rem 1rem rgba(0,0, 0, 0.9);
+    background-color: var(--primary-color);
+    border-radius: 0.9rem;
+    
+}
+.explore-food .card p{
+ color: #fff;   
+}
+.explore-food .card img{
+    object-fit: cover;
+    border-radius: 0.9rem;
+}
+.explore-food .card span{
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white-color);
+    padding-bottom:1rem ;
+    border-bottom: 0.0625em solid #fff; 
+}
+.explore-food .card del{
+   color: var(--third-color);
+   margin-left: 0.5rem;
+}
+
+/*
+===========================
+    testamonial section design
+===========================
+*/
+
+.testimonial-section{
+    background: var(--primary-color);
+}
+.testimonial-section .carousel-item{
+    margin-top:3rem ;
+    padding: 10rem 3.125rem;
+    background: var(--white-color);
+    border-radius: 0.9375rem;
+    text-align: center;
+}
+.testimonial-section .carousel-item p{
+   font-size: 1.3125rem;
+   line-height: 2.065rem;
+   padding: 0 11% 0.625rem;
+}
+.testimonial-section  .carousel-caption img{
+   max-width: 5rem;
+   border-radius: 50%;
+   padding: 0.3125rem;
+
+}
+.testimonial-section .carousel-indicators{
+    bottom: -5rem;
+
+}
+.testimonial-section .carousel-indicators button{
+    width: 15px;
+    height: 15px;
+    outline: none;
+    border-radius: 50%;
+    border: none;
+    margin: 1rem;
+    opacity: 0.2;
+}
+.testimonial-section .carousel-indicators button.active{
+    
+    opacity: 1;
+}
+/*
+===========================
+    faq section design
+===========================
+*/
+.faq h4 span {
+    color: var(--primary-color);
+    font-size: 1.45rem;
+    margin-right: 0.1rem;
+}
+.book-food{
+    width: 100%;
+    background: url(Img/817122.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 0 71.9125px;
+    padding: 4.375rem 0;
+}
+/*
+===========================
+    from control section design
+===========================
+*/
+.newsletter{
+    width: 55%;
+    margin: 0 auto;
+}
+.newsletter .form-control{
+    height: 3.25rem;
+    padding:0 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    border:0.2rem solid var(--text-gray);
+    color: var(--black-color);
+
+}
+
+.newsletter .form-control:hover,
+.newsletter .form-control:focus{
+    outline: none;
+    box-shadow: none ;
+    border-color: var(--primary-color);
+}
+/*
+===========================
+    footer section design
+===========================
+*/
+.footer{
+    background: var(--primary-color);
+}
+.footer .footer-link{
+    font-size: 1.3rem;
+    color: var(--white-color);
+    padding: 0 1.875rem;
+
+}
+.footer  a:hover{
+    color: #fff!important;
+}
+
+.footer a i{
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 0 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1024px) {
+    
+}
+@media (max-width:991px) {
+    /*custom class*/
+    .text-content{
+        width: 100%;
+    }
+    /*nav brand*/
+    
+    .navigation-wrap{
+        text-align: center;
+        background-color:var(--secondary-color);
+    }
+    .navigation-wrap .nav-link{
+        line-height: 1.875rem;
+    }
+      /* top-banner*/
+      .top-banner{
+        padding: 11.375rem 0 9.375rem;
+      }
+      /* Carousel design */
+      .testimonial-section .carousel-caption .p{
+        padding: 0;
+      }
+}
+@media (max-width:767px) {
+    /*custom class*/
+    h1{
+        font-size: 2.5rem;
+        
+    }
+    h2{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    /* top-banner*/
+    .top-banner{
+        padding: 12rem 0 9rem;
+        
+    }
+    .top-banner button{
+        margin-bottom: 1.5rem;
+        width:100%
+        
+    }
+     /* story-section*/
+    .story-section{
+        height: auto;
+        padding: 3rem 0;
+
+        
+    }
+    /* carousel section */
+    .testimonial-section .carousel-caption .p{
+        padding: 11rem 3.125rem;
+      }
+      /* newsletter */
+      .newsletter{
+        width: 75%;
+      }
+      .newsletter .main-btn{
+        width:100%;
+        margin-top:1rem;
+      }
+      /* footer */
+      .footer .footer-link,
+      .footer .footer-link a i{
+        padding: 0 0.7rem;
+      }
+}
+@media(max-width:350px){
+    .testimonial-section .row {
+        display: none;
+      }
+}
