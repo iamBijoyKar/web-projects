@@ -6,7 +6,8 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(to bottom left, #ff380c, #fff439);
+  background: black
+ 
 }
 
 h1 {
@@ -20,6 +21,9 @@ h1 {
   display: flex;
   justify-content: space-around;
   padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
 }
 
 .sub {
@@ -38,7 +42,20 @@ a {
   color: inherit;
   font-size: x-large;
 }
+p{
+  background-color: aliceblue;
+  border: 1px solid blueviolet;
+  border-radius: 14px;
+  margin-top: -0.5rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+p:hover{
+ background-color: blueviolet;
+}
 
 a img {
-  width: 500px;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 13px;
+
 }

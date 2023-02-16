@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Roboto+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+nav ul{
+    list-style-type: none;
+    
+   
+}
+nav{
+    background-color: black;
+    color: aliceblue;
+    height: 65px;
+    
+    display: flex;
+    align-items: center;
+    font-size: 27px;
+    padding: 0 12px;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.game-container{
+ 
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.contain{
+    display: grid;
+    grid-template-rows:repeat(3,10vw);
+    grid-template-columns:repeat(3,10vw);
+    font-family: 'Roboto Mono', monospace;
+
+    position: relative;
+}
+.box{
+    border:2px solid black;
+    font-size: 8vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: cornflowerblue;
+    cursor: pointer;
+}
+.game-info{
+    padding: 0 34px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right:0 ;
+}
+.bl-0{
+    border-left:0;
+}
+.bt-0{
+    border-top:0;
+
+}
+.bb-0{
+    border-bottom:0;
+}
+.btn1{
+    margin: 0 23px;
+    padding: 1px 18px;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    font-weight: bolder;
+}
+.info{
+    font-size: 20px;
+}
+.line{
+    background-color: black;
+    width: 0;
+    height:3px;
+    position:absolute;
+    background-color: blueviolet;
+    transition: width 1s ease-in-out;
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width:800px) {
+    .game-container{
+        flex-wrap: wrap;
+    }
+    .game-info{
+        margin-top:34px ;
+    }
+    .game-info h1{
+        font-size: 1.5rem;
+    }
+    .contain{
+        display: grid;
+        grid-template-rows:repeat(3,16vw);
+        grid-template-columns:repeat(3,16vw);  
+    }
+}
